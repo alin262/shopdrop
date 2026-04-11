@@ -1,0 +1,14 @@
+# Node
+node_modules/
+.env
+
+# Flutter
+.dart_tool/
+build/
+*.g.dart
+
+# AWS
+*.pem
+
+# Next.js (just in case)
+.next/
