@@ -1,4 +1,3 @@
-const product = require("../models/product");
 const Product= require("../models/product");
 
 const getProducts=async(req,res)=>{
@@ -12,8 +11,9 @@ const getProducts=async(req,res)=>{
 
 const getProduct=async(req,res)=>{
     try{
-        const product=await Product.findbyId(req.params.id)
-        if(!product)  return res.json({message:"Product not found"})
+        const product=await Product.findById(req.params.id)
+        if(!product)  return res.json({message:"Product not found"});
+        res.json(product);
 
     }catch(e){
         res.status(500).json({message:e.message})
